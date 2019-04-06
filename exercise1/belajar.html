@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1,
+    h2 {
+        color: #0077c2
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border-radius: 8px;
+    }
+</style>
+
+<head>
+    <title>Tentang saya</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+<body bgcolor="green"></body>
+    <div class="container-fluid">
+
+        <div class="jumbotron">
+            <h1 style="text-align: center">Hi dibawah ini adalah foto masa kecil saya</h3>
+        </div>
+
+        <img class="img-thumbnail" src="masakecil.jpg" alt="">
+        <h1 class="mt-4">Berikut data diri saya</h1>
+        <table class="table mt-4">
+            <tr>
+			
+			arc
+			ls -lrt *.arc | grep "Mar 1" | head -50 | awk '{print $9}' | xargs -i rm {}
+			ls -lrt *.arc.gz | grep "Mar 1" | awk '{print $9}' | xargs -i rm {}
+                <td>
+                    <h5>Nama saya</h5>
+                </td>
+                <td>
+                    Nita Septiani
+					
+					
+					
+n : halooo ki.. lagi dimana ki?  
+k : iya ta, kenapa si ko panik ?
+n : ngga panik
+k : lah terus itu kenapa ?
+n : dari kemaren gelisah tiba tiba pengen nikah
+k : idih.. nikah tuh bukan perkara lagi pengen ta
+	nikah tuh buat selamanya bukan sementara
+n : iya tau tapi ini tiba tiba kaya gini ga tau kenapa 
+k : ada ada aja kamu, yaudah mau aku kasih mahar apa ?
+n : idih ya bukan sama kamu juga, kita udah temenan lama masa nikah
+k : ih tapi kan keren 
+n : nikah bukan perkara keren ki
+k : idih kata katanya nyontek 
+n : hahaha gapapa dong
+k : hahaha dasar pesek     
+
+
+
+n : yank ?
+	maafin aku ya soal yang tadi
+k : ini permintaan maaf kamu untuk kesekian kalinya
+n : aku bukannya ga mau tapi kamu tau sendiri kan latar belakang keluargaku 
+	itu yang bikin takut untuk nikah	
+k : kamu cuma terus terusan nyimpan rasa takut kamu
+n : ngga ada 
+k : oh ya pernah tadiaku tiba tiba kepikiran kalo kita yang udah temenan lama banget ternyata jodoh ?
+n : lucu kali ya kalo akhirnya kita nikah
+n : hmmm
+k : lucu ?
+n : ngga aku tiba tiba kepikiran aja
+
+k : ta lagi ngapain?
+n : lagi duduk aja nih
+k : salsa tiba tiba ngejauh tanpa alesan
+n : loh ko bisa?
+k : ga tau,di tanyain alasan jga ga jawab dan sekarang dia lagi deket sama cowo lain
+n : kamu sama dia pacaran apa gimaana ?
+k : ngga pacaran, cuma saling nyaman aja. aku udah ada niat mau kenalin dia kekeluarga
+n : gini ki.. nyaman,suka sama sayang itu hal yang berbeda
+
+k : halo ta
+n : iya ki, eh di bandung gimana ?
+k : lagi dingin dinginnya nih
+n : hmm.. pasti jadi males mandi ya hahaha
+k : hahaha tau aja nih
+n : iya dong,
+k : kamu lagi apa ?
+n : lagi duduk aja nih abis ngerjain tugas kampus, oh ya kamu yang semangat ngampusnya 
+k : iya nyonya siaaap
+	eh ta.. aku mau nanya sesuatu, serius ya ta
+n : idih serius amat dah, yaudah nanya apa
+k : selama kita temenan,pernah ga kamu ngerasain rasa yang beda? tentang kita
+n : maksudnya ?
+
+
+        </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Jenis Kelamin</h5>
+                </td>
+                <td>
+                    Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Tempat & tanggal lahir </h5>
+                </td>
+                <td>
+                    Tasikmalaya, 12 September 1997
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Alamat saya sekarang tinggal</h5>
+                </td>
+                <td>
+                    Jalan pancoran barat II belakang martabak D'Raja jakarta selatan
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Agama saya</h5>
+                </td>
+                <td>Islam</td>
+            </tr>
+                  <tr>
+                <td>
+                    <h5>Email</h5>
+                </td>
+                <td>
+                    nitas.septiani@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Nomor Telpon </h5>
+                </td>
+                <td>081295243233</td>
+				<tr>
+				<td>
+				<p>Terima Kasih banyak sudah meluangkan waktunya membaca sekilas info tentang saya</p></tr></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+Tugas menyusun Proces-Proces Group Proyek dengan mencetak, menggunting dan menempel sesuai dengan Kanvasnya.
+
+
+set pages 1000;
+set lines 200;
+column machine format a20;
+	select
+	 distinct
+	 c.owner,
+	 substr(c.object_name,1,30) object_name,
+	 c.object_type,
+	 b.status,
+	 b.osuser,
+	 machine
+	from
+	 v$locked_object a ,
+	 v$session b,
+	 dba_objects c
+	where
+	 b.sid = a.session_id
+	and
+	 a.object_id = c.object_id
+and OBJECT_NAME like lower('%%');
+
+column sql_text format a80;
+column osuser format a15;
+column program format a20;
+set lines 200;
+show parameter instance_name;
+select s1.username || '@' || s1.machine|| ' ( SID=' || s1.sid || ' ) is blocking '|| s2.username || '@' || s2.machine || ' ( SID=' || s2.sid || ' ) ' AS blocking_status
+from v$lock l1, v$session s1, v$lock l2, v$session s2
+where s1.sid=l1.sid and s2.sid=l2.sid
+and l1.BLOCK=1 and l2.request > 0
+and l1.id1 = l2.id1
+and l2.id2 = l2.id2 ;
+
+
+Handover Shift 1 20190322
+
+TC 
+- Keep Monitor OMi
+- regular report CPU FR, RB, RPL (get from grafana)
+
+DBA
+1. [request] Create file raw TKCM01-TKOP01 (Dox Stg has shared CRQ, waiting an update once activity completed)
+2. RE: Monitoring Tablespace utilization | keep FU
+
+STG
+1. 5336800696 | XP24K SOLO Battery life is over | ETA Part ready di pertengahan Mei)
+2. Restore file BAL 20190319 | bat-siapp02 (tinggal tanggal 13-16) | Waiting Dox STG respond to restore
+3. RE: New case email notification. Case number 5336942469 RE: P9500 - XP Missing Heartbeat + AV400A_USHA066834 [ ] | Waiting confirm for next VR
+4. 5337297474   | Disk EVA BRN 198 failed | waiting reply from hpe
+5. RE: [P2 - INC000004192381] RE: INC000004189083 - Pemakain Sementara MSISDN 6282112238956 Tidak Sesuai (restore) | need fu dox 
+
+UNIX
+- 
+
+FYI
+5337260366 | 3PAR PROD BSD 1123 PDID Faield | done
+RE: Restore Request Form - restore fr log 6282311467012 and 6281289383675 | File FR on rbs-siapp27 not found | Done .
+
+
+Shift berikutnya : Miftah dan Egi
+
+
+
+Ini yang bener untuk cek blocking sessions
+
+
+
+
+
+
+apa kabar?
+kini aku jadi wanita pernuh tanyai
+kadang menginerka nerka
+tentang kita yang 
